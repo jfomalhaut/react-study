@@ -1,0 +1,16 @@
+.content{
+	display: flex;
+}
+
+h1{
+	border-bottom: 1px solid;
+}
+
+.content .left{
+	width: 200px;
+	border-right: 1px solid;
+}
+
+.content .right{
+	flex: 1;
+}

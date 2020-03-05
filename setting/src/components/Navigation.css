@@ -1,0 +1,19 @@
+.header{
+	height: 50px;
+	border-bottom: 1px solid #ddd;
+}
+
+.header ul{
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header ul li{
+	list-style: none;
+	width: 100px;
+	font-size: 20px;
+	text-align: center;
+	color: black;
+}
