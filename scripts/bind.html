@@ -1,0 +1,20 @@
+<html>
+<head></head>
+<body>
+	<script>
+		var obj = {
+			prop: 'Hello',
+			sayHello: function(){
+				console.log(this.prop);
+			}
+		};
+
+		obj.sayHello();
+
+		// reference에 담길 때 ojb와의 관계가 상실된다. 이 때 bind가 필요하다.
+		var reference = obj.sayHello.bind(obj);
+		reference();
+		
+	</script>
+</body>
+</html>
