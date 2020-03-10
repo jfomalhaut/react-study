@@ -14,3 +14,8 @@ button{
 .container{
 	padding: 20px;
 }
+
+a, a:active, a:link, a:hover{
+	text-decoration: none;
+	color: black;
+}
