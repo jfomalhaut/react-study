@@ -1,0 +1,10 @@
+.item{
+	width: 100%;
+	font-size: 30px;
+	cursor: pointer;
+	border: 1px solid #ddd;
+}
+.item .img{
+	overflow: hidden;
+}
+.item img{ width: 100%;}

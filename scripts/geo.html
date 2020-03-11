@@ -1,0 +1,20 @@
+<html>
+<head></head>
+<body>
+	<button onclick="get()">
+		<h1>찾기</h1>
+	</button>
+	<script>
+		function get() {
+			navigator.geolocation.getCurrentPosition(function(position) {
+				console.log(position.coords.latitude + ", " + position.coords.longitude);
+			}, function(error){
+				console.log(error);
+			});
+		}
+		if (navigator.geolocation) {
+			console.log('dd');
+		}
+	</script>
+</body>
+</html>

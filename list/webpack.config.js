@@ -1,7 +1,10 @@
 const webpack = require('webpack');
 
 module.exports = {
-	entry: ['./src/index.js'],
+	entry: [
+		'react-hot-loader/patch',
+		'./src/index.js'
+	],
 	module: {
 		rules: [
 			{
@@ -15,12 +18,8 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.(css)$/,
+				test: /\.css$/,
 				use: ['style-loader', 'css-loader']
-			},
-			{
-				test: /\.(pdf|jpg|png|gif|svg|ico)$/,
-				use: [{ loader: 'url-loader' }]
 			}
 		]
 	},
@@ -32,7 +31,9 @@ module.exports = {
 		publicPath: '/',
 		filename: 'bundle.js'
 	},
-	plugins: [new webpack.HotModuleReplacementPlugin()],
+	plugins: [
+		new webpack.HotModuleReplacementPlugin()
+	],
 	devServer: {
 		contentBase: './dist',
 		port: 3000,

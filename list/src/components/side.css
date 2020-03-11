@@ -1,0 +1,25 @@
+.sidebar{
+	box-sizing: border-box;
+	width: 200px;
+	min-height: 100vh;
+	border-right: 1px solid;
+}
+
+.sidebar ul {
+	padding: 0;
+	margin: 0;
+}
+
+.sidebar ul li {
+	font-size: 30px;
+	line-height: 80px;
+	text-align: center;
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+	cursor: pointer;
+	user-select: none;
+}
+li:hover{
+	background: #f0f0f0;
+	color: blue;
+}

@@ -1,0 +1,23 @@
+.navi_ul {
+	display: flex;
+}
+
+.navi_ul li{
+	list-style: none;
+	width: 100px;
+	text-align: center;
+	font-size: 25px;
+	font-weight: 600;
+}
+.navi_ul li a {
+	/* color: blue; */
+}
+
+a, a:active, a:link, a:visited{
+	color: black;
+	text-decoration: none;
+}
+
+.activeNavLink{
+	color: red !important;
+}
