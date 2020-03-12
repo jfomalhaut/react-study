@@ -1,0 +1,87 @@
+.store{
+	border: 1px solid #ddd;
+	background-color: white;
+	/* border-radius: 3px; */
+	margin-bottom: 10px;
+	padding: 20px 15px;
+	box-shadow: 5px 5px 10px #eaeaea;
+	color: #666;
+	transition: .2s;
+}
+.store:hover{
+	border-color: #e7711a;
+	transform: scale(1.02);
+}
+.store:active{
+	transform: scale(1);
+}
+
+.stocks{
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.stocks .stockDesc{
+	display: flex;
+	align-items: center;
+	padding: 1px 5px;
+	background-color: #e7711a;
+	border-radius: 5px;
+	color: white;
+	font-size: 12px;
+	letter-spacing: -1px;
+	margin-right: 10px;
+}
+
+.stocks .empty {
+	/* color: #999; */
+	background-color: #999;
+	color: white;
+}
+
+.stock{
+	display: flex;
+	align-items: center;
+}
+.stock li{
+	margin-right: 0;
+}
+.stock .pkg{
+	color: #999;
+	display: flex;
+	align-items: center;
+}
+.stock .active{
+	color: #e7711a;
+}
+
+.storeName{
+	display: flex;
+	align-items: center;
+	margin: 5px 0;
+}
+
+.storeName .name {
+	color: black;
+	font-size: 17px;
+	font-weight: 600;
+	letter-spacing: -1px;
+}
+.storeName .type{
+	letter-spacing: -1px;
+	color: #999;
+	font-size: 14px;
+}
+
+.storeName .type:before{
+	content: '|';
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.address{
+	letter-spacing: -1px;
+	margin: 5px 0;
+	font-size: 13px;
+	/* color: #999; */
+}
