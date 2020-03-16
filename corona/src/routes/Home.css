@@ -1,15 +1,68 @@
 .container{
 	display: flex;
 }
+.left{
+	border-right: 1px solid #ddd;
+	max-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
 
 .stores{
 	width: 400px;
+	flex: 1;
 	padding: 10px;
-	max-height: 100vh;
 	overflow: scroll;
 }
 .map{
 	flex-grow: 1;
 	background-color: darkgray;
 	max-height: 100vh;
+}
+
+.search{
+	padding: 10px;
+	height: 70px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+	border-bottom: 1px solid #ddd;
+	background: white;
+}
+
+.search input{
+	width: 100%;
+	outline: none;
+	border: none;
+	padding: 15px;
+	padding-left: 45px;
+	padding-right: 35px;
+	font-size: 16px;
+	letter-spacing: -1px;
+	border-bottom: 1px solid #999;
+}
+
+.search .searchIcon{
+	position: absolute;
+	font-size: 25px;
+	color: #999;
+	left: 20px;
+	margin-top: -2px;
+}
+
+.search .deleteIcon{
+	position: absolute;
+	font-size: 20px;
+	cursor: pointer;
+	color: #999;
+	right: 20px;
+	font-size: 25px;
+	margin-top: -2px;
+}
+.search .deleteIcon:hover{
+	color: #666;
+}
+.search .deleteIcon:active{
+	color: #444;
 }

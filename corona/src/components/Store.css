@@ -8,6 +8,10 @@
 	color: #666;
 	transition: .2s;
 }
+.active{
+	border-color: #e7711a;
+	transform: scale(1.02);
+}
 .store:hover{
 	border-color: #e7711a;
 	transform: scale(1.02);

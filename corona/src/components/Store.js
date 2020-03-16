@@ -3,7 +3,7 @@ import moment from 'moment';
 import { IoMdStar } from "react-icons/io";
 import './Store.css';
 
-const Store = ({ test, item: { name, addr, type, stock_at, remain_stat, lat, lng, created_at } }) => {
+const Store = ({ onPressHandler, activeCode, item: { code, name, addr, type, stock_at, remain_stat, lat, lng, created_at } }) => {
 	const [pkg, setPkg] = useState([]);
 
 	const getStock = label => {
@@ -42,7 +42,7 @@ const Store = ({ test, item: { name, addr, type, stock_at, remain_stat, lat, lng
 	}, []);
 
 	return (
-		<div className="store">
+		<div className={`store ${activeCode === code ? 'active' : ''}`} id={`store${code}`} onClick={() => onPressHandler(code)}>
 			<div className="stocks">
 				<div className={`${remain_stat} stockDesc`}>{getStock(remain_stat)}</div>
 				<ul className="stock">
