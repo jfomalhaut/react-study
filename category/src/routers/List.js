@@ -21,37 +21,26 @@ const List = () => {
 		if (type === onType) {
 			return;
 		}
-		setLoading(true);
+		
 		setOnType(type);
-		// if (type === 0) {
-		// 	setView(Items);
-		// } else {
 		const sort = type === 0 ? ITEMS : ITEMS.filter(item => type === item.type);
 		setView(sort);
-		// }
 	};
 
-	const offLoading = () => {
+	useEffect(() => {
+		setLoading(true);
 		setTimeout(() => {
 			setLoading(false);
 		}, 200);
-	};
-
-	useEffect(() => {
-		offLoading();
 	}, [onType]);
 
 	useEffect(() => {
-		setView(Items);
-		offLoading();
+		setView(ITEMS);
 	}, []);
 
 	return (
 		<div className="container">
 			<ul className="header">
-				<li className={`label ${onType === 0 ? 'active' : ''}`} onClick={() => sortItems(0)}>
-					전체보기
-				</li>
 				{CATEGORY.map(item => (
 					<li className={`label ${onType === item.id ? 'active' : ''}`} onClick={() => sortItems(item.id)}>
 						{item.label}

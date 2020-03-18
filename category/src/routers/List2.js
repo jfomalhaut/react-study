@@ -33,16 +33,9 @@ const List2 = ({ match, history }) => {
 			case 'fruit' : type = 2; break;
 			case 'vegetable' : type = 3; break;
 		}
-		setLoading(true);
 		setOnType(type);
 		const sort = type === 0 ? ITEMS : ITEMS.filter(item => type === item.type);
 		setView(sort);
-	};
-
-	const offLoading = () => {
-		setTimeout(() => {
-			setLoading(false);
-		}, 500);
 	};
 
 	useEffect(() => {
@@ -51,18 +44,15 @@ const List2 = ({ match, history }) => {
 			history.push(`/all`);
 			return;
 		}
-
-		setLoading(true);
 		sortItems(category);
 	}, [category]);
 
 	useEffect(() => {
-		offLoading();
+		setLoading(true);
+		setTimeout(() => {
+			setLoading(false);
+		}, 200);
 	}, [onType]);
-
-	useEffect(() => {
-		offLoading();
-	}, []);
 
 	return (
 		<div className="container">
