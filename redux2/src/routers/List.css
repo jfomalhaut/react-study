@@ -4,6 +4,7 @@
 }
 .count{
 	color: #C9242B;
+	font-size: 15px;
 }
 .options {
 	margin-bottom: 20px;
@@ -73,4 +74,8 @@ button.delete{
 }
 .price {
 	font-size: 17px;
+}
+
+.pricePerCount{
+	font-size: 12px;
 }
