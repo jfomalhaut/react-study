@@ -30,6 +30,7 @@ const Home = ({ coords }) => {
 	const getDrugStore = (lat, lng) => {
 		Axios.get(`https://8oi9s0nnth.apigw.ntruss.com/corona19-masks/v1/storesByGeo/json?lat=${lat}&lng=${lng}&m=1000`).then(res => {
 			const { data: { count, stores } } = res;
+			console.log(stores);
 			const data = stores.filter(item => {
 				return item.remain_stat && item.remain_stat !== 'break';
 			});
